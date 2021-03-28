@@ -9,6 +9,6 @@ total_summary <- suspenData %>% summarize(Mean=mean(PSI), Median=median(PSI), Va
 lot_summary <- suspenData %>% group_by(Manufacturing_Lot) %>% summarize(Mean=mean(PSI), Median=median(PSI), Variance=var(PSI), SD=sd(PSI))
 
 t.test(x=suspenData$PSI, mu=1500)
-t.test(x=lot_summary$Mean, subset = lot_summary$Manufacturing_Lot == "Lot1", mu=1500)
-t.test(x=lot_summary$Mean, subset = lot_summary$Manufacturing_Lot == "Lot2", mu=1500)
-t.test(x=lot_summary$Mean, subset = lot_summary$Manufacturing_Lot == "Lot3", mu=1500)
+t.test(x=suspenData$PSI, subset=suspenData$Manufacturing_Lot == "Lot1", mu=1500)
+t.test(x=suspenData$PSI, subset=suspenData$Manufacturing_Lot == "Lot2", mu=1500)
+t.test(x=suspenData$PSI, subset=suspenData$Manufacturing_Lot == "Lot3", mu=1500)

@@ -12,3 +12,4 @@ t.test(x=suspenData$PSI, mu=1500)
 t.test(x=suspenData$PSI, subset=suspenData$Manufacturing_Lot == "Lot1", mu=1500)
 t.test(x=suspenData$PSI, subset=suspenData$Manufacturing_Lot == "Lot2", mu=1500)
 t.test(x=suspenData$PSI, subset=suspenData$Manufacturing_Lot == "Lot3", mu=1500)
+
